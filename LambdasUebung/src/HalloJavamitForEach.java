@@ -5,7 +5,7 @@ import java.util.List;
 public class HalloJavamitForEach {
 
     List<String> oldListTyp = new ArrayList<>();
-
+    Main main;
 
     public void showList() {
 
@@ -19,7 +19,7 @@ public class HalloJavamitForEach {
 
         oldListTyp.forEach(System.out::println);
 
-        Arrays.asList();
+        main.formatText(String.valueOf(oldListTyp));
     }
 
 }
