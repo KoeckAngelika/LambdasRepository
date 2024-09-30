@@ -4,22 +4,14 @@ import java.util.List;
 
 public class HalloJavamitForEach {
 
-    List<String> oldListTyp = new ArrayList<>();
-    Main main;
+    Consumer consumer;
 
-    public void showList() {
+    public void setConsumer(Consumer consumer) {
+        this.consumer = consumer;
+    }
 
-        oldListTyp.add("A");
-        oldListTyp.add("B");
-        oldListTyp.add("C");
-
-        for (int i = 0; i < oldListTyp.size(); i++) {
-            System.out.println(oldListTyp.get(i));
-        }
-
-        oldListTyp.forEach(System.out::println);
-
-        main.formatText(String.valueOf(oldListTyp));
+    public String formatText(String text){
+        return String.valueOf(consumer.format(text));
     }
 
 }
