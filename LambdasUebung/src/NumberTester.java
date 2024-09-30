@@ -24,7 +24,6 @@ public class NumberTester {
 
     }
 
-g
 
     public void testFile ( ) {
 
