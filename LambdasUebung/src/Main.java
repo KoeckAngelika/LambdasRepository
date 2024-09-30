@@ -72,7 +72,7 @@ public class Main {
 
                 } else if (number1 == 3) {
 
-                    /*System.out.println("Palidrom");
+                    System.out.println("Palidrom");
                     numberTest.setPalindromeTester(number2);
                     int evenNumberCalculate = numberTest.palindrome(number2);
                     if (evenNumberCalculate == 0)
@@ -82,7 +82,7 @@ public class Main {
                     {
                         System.out.println(number2 + " PALIDROM");
                     }
-                    System.out.println();*/
+                    System.out.println();
                 }
 
             }
