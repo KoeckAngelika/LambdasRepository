@@ -52,5 +52,36 @@ public class ReadInCSV {
         return listMap;
     }
 
-    
+    private String desirealize(String line) {
+        String[] parts = line.split(" ");
+        String holeInteger = "";
+        int countTheParts = 0;
+
+        for (int i = 0; i < parts.length; i++) {
+            countTheParts++;
+        }
+
+        if (countTheParts == 1)
+        {
+            number = Integer.parseInt(parts[0]);
+            holeInteger = holeInteger + number;
+        }else
+        {
+            number = Integer.parseInt(parts[0]);
+            holeInteger = holeInteger + number + " ";
+            placeholder = Integer.parseInt(parts[1]);
+            holeInteger = holeInteger + placeholder;
+        }
+
+        return holeInteger;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public Integer getPlaceholder() {
+        return placeholder;
+    }
+
 }

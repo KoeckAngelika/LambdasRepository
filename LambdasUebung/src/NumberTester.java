@@ -42,11 +42,71 @@ public class NumberTester {
         }
     }
 
+    Calculator isPrime = (number -> primeTester);
+
+    public int ceiling = 100001;
+    Boolean[] ceilingList = new Boolean[ceiling];
+
+    public boolean prime(int primeTester) {
+
+        int evenNumber =  isPrime.calculate(primeTester);
+
+        isPrimeCheck();
+
+        if (ceilingList[evenNumber]) {
+            return true;
+        }
+        return false;
+    }
+
+    public void isPrimeCheck()
+    {
+        for (int i = 1; i < ceiling; i++) {
+            ceilingList[i] = true;
+        }
+
+        for (int i = 2; i < Math.sqrt(ceilingList.length); i++) {
+            if (ceilingList[i]) {
+                int deleatIndex = i * i;
+                while (deleatIndex < ceiling) {
+                    ceilingList[deleatIndex] = false;
+                    deleatIndex = deleatIndex + i;
+                }
+            }
+        }
+    }
+
+    public void setPrimeTester (int primeTester ) {
+        this.primeTester = primeTester ;
+    }
+    Calculator isPalindrome = (number -> palindromeTester);
+
+    public void setPalindromeTester (int palindromeTester ) {
+        this.palindromeTester = palindromeTester ;
+    }
+
+    public int palindrome(int palindromeTester) {
+
+        int evenNumber = isPalindrome.calculate(palindromeTester);
+
+        String otherLineNumber = evenNumber + "";
+        String line = "";
+        for (int i = otherLineNumber.length() - 1; i >= 0; i--) {
+            line = line + String.valueOf(otherLineNumber.charAt(i));
+        }
+        if (otherLineNumber.equals(line)) {
+            return 1;
+        }
+        return evenNumber;
+
+    }
 
 
 
 
-        public void testFile ( ) {
+
+
+    public void testFile ( ) {
 
         }
 }
