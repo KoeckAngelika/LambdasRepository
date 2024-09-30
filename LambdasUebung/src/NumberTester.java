@@ -83,22 +83,29 @@ public class NumberTester {
     public void setPrimeTester (int primeTester ) {
         this.primeTester = primeTester ;
     }
+    Calculator isPalindrome = (number -> palindromeTester);
 
+    public void setPalindromeTester (int palindromeTester ) {
+        this.palindromeTester = palindromeTester ;
+    }
 
+    public int palindrome(int palindromeTester) {
 
+        int evenNumber = isPalindrome.calculate(palindromeTester);
 
-
-
-
-
-
-
-    public void testFile ( ) {
-
-
+        String otherLineNumber = evenNumber + "";
+        String line = "";
+        for (int i = otherLineNumber.length() - 1; i >= 0; i--) {
+            line = line + String.valueOf(otherLineNumber.charAt(i));
+        }
+        if (otherLineNumber.equals(line)) {
+            return 1;
+        }
+        return evenNumber;
 
     }
 
+        public void testFile ( ) {
 
-
+        }
 }
