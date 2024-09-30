@@ -90,7 +90,34 @@ public class Main {
         }
     }
 
-   
+    public static void project3()
+    {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Chosse calculator:");
+        System.out.println("1# Relationalcalculator");
+        System.out.println("2# Vectorcalculator");
+        System.out.println("3# Complexcalculator");
+        System.out.println("4# Exit programm");
+        int whichCalculator = Integer.parseInt(scanner.nextLine());
+        System.out.println(">" + whichCalculator);
+        while (whichCalculator == 4)
+        {
+
+
+
+
+            System.out.println("Chosse calculator:");
+            System.out.println("1# Relationalcalculator");
+            System.out.println("2# Vectorcalculator");
+            System.out.println("3# Complexcalculator");
+            System.out.println("4# Exit programm");
+            whichCalculator = Integer.parseInt(scanner.nextLine());
+            System.out.println(">" + whichCalculator);
+        }
+
+
+    }
+
 
 
 
